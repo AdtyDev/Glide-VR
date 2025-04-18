@@ -1,0 +1,154 @@
+/* Root Variables */
+:root {
+  --primary-color: #00ccff; /* Neon blue for VR */
+  --accent-color: #ff4081; /* Vibrant pink for highlights */
+  --background-color: #000; /* Black background for contrast */
+  --grid-color: rgba(255, 255, 255, 0.1); /* Light grid lines */
+  --text-color: #ffffff; /* White text */
+  --shadow-color: rgba(0, 204, 255, 0.5); /* Neon shadow */
+}
+
+/* General Styling */
+body {
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+/* Login Page */
+.login-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(180deg, #000, #001a33);
+  overflow: hidden;
+}
+
+/* Grid Overlay */
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      var(--grid-color) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 2;
+}
+
+/* Stars Overlay */
+.stars-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/public/images/stars.png') repeat;
+  opacity: 0.3;
+  z-index: 3;
+}
+
+/* Login Container */
+.login-container {
+  position: relative;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px var(--shadow-color);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.login-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.login-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: var(--text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 0 10px var(--shadow-color) inset;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px var(--shadow-color);
+}
+
+.login-button:hover {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 30px var(--accent-color);
+}
+
+.login-footer {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.login-footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
